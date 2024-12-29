@@ -4,6 +4,10 @@ import { BookOpen, ArrowUpRight } from "lucide-react";
 export const Publications = () => {
   const articles = [
     {
+      title: "Boisterous Kids? – Just Love Them!",
+      url: "https://www.thejewishnews.com/opinion/boisterous-kids-just-love-them/article_66923306-71f1-5e26-9107-f2f3a55cb3c7.html",
+    },
+    {
       title: "A Hotel in Savannah, Georgia: Yom Kippur 5777",
       url: "https://mishpacha.com/a-hotel-in-savannah-georgia-yom-kippur-5777/",
     },
