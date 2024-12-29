@@ -1,53 +1,53 @@
 import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { ExternalLink, Play, Pause } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 
-interface AudioClass {
+interface VideoClass {
   title: string;
   description: string;
-  audioUrl?: string;
-  externalUrl?: string;
+  youtubeUrl: string;
   date: string;
   topic: string;
 }
 
 export const Classes = () => {
-  const [playingId, setPlayingId] = useState<number | null>(null);
-  const audioRefs = useRef<{ [key: number]: HTMLAudioElement }>({});
-
-  const classes: AudioClass[] = [
+  const classes: VideoClass[] = [
     {
-      title: "Understanding the Power of Prayer",
-      description: "An exploration of the deeper meaning behind Jewish prayer and its impact on our daily lives.",
-      externalUrl: "https://example.com/prayer-class",
-      date: "March 2024",
+      title: "Parshat Vayigash - The Power of Unity",
+      description: "An exploration of the profound lessons about unity and reconciliation from the story of Joseph and his brothers.",
+      youtubeUrl: "https://youtu.be/zKnMRBFCxng?t=1704",
+      date: "December 2023",
+      topic: "Torah Portion"
+    },
+    {
+      title: "The Meaning Behind the Shofar",
+      description: "Understanding the deeper significance of the shofar and its role in Jewish tradition.",
+      youtubeUrl: "https://www.youtube.com/watch?v=50IBKFTRvy4",
+      date: "September 2023",
+      topic: "High Holidays"
+    },
+    {
+      title: "Exploring Jewish Mysticism",
+      description: "A journey into the mystical dimensions of Judaism and their relevance to modern life.",
+      youtubeUrl: "https://www.youtube.com/watch?v=E1uz1SfrBMc",
+      date: "August 2023",
+      topic: "Jewish Mysticism"
+    },
+    {
+      title: "Understanding Jewish Prayer",
+      description: "Delving into the structure and meaning of Jewish prayer and its impact on spiritual growth.",
+      youtubeUrl: "https://www.youtube.com/watch?v=jaXL0cIl98A",
+      date: "July 2023",
       topic: "Prayer"
     },
     {
-      title: "The Joy of Shabbat",
-      description: "Discover the beauty and significance of Shabbat observance in modern life.",
-      externalUrl: "https://example.com/shabbat-class",
-      date: "February 2024",
-      topic: "Shabbat"
+      title: "The Jewish Perspective on Relationships",
+      description: "Exploring the Jewish approach to building and maintaining meaningful relationships.",
+      youtubeUrl: "https://www.youtube.com/watch?v=Y05qVL67RI8",
+      date: "June 2023",
+      topic: "Relationships"
     }
   ];
-
-  const togglePlay = (index: number) => {
-    if (playingId === index) {
-      audioRefs.current[index]?.pause();
-      setPlayingId(null);
-    } else {
-      // Pause any currently playing audio
-      if (playingId !== null && audioRefs.current[playingId]) {
-        audioRefs.current[playingId].pause();
-      }
-      if (audioRefs.current[index]) {
-        audioRefs.current[index].play();
-        setPlayingId(index);
-      }
-    }
-  };
 
   return (
     <section className="py-24 relative overflow-hidden">
@@ -73,45 +73,19 @@ export const Classes = () => {
                       {classItem.date} • {classItem.topic}
                     </p>
                   </div>
-                  {classItem.audioUrl && (
-                    <button
-                      onClick={() => togglePlay(index)}
-                      className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
-                      aria-label={playingId === index ? "Pause" : "Play"}
-                    >
-                      {playingId === index ? (
-                        <Pause className="w-5 h-5 text-primary" />
-                      ) : (
-                        <Play className="w-5 h-5 text-primary" />
-                      )}
-                    </button>
-                  )}
                 </div>
 
                 <p className="text-gray-600 mb-4">{classItem.description}</p>
 
-                {classItem.audioUrl && (
-                  <audio
-                    ref={(el) => {
-                      if (el) audioRefs.current[index] = el;
-                    }}
-                    src={classItem.audioUrl}
-                    onEnded={() => setPlayingId(null)}
-                    className="hidden"
-                  />
-                )}
-
-                {classItem.externalUrl && (
-                  <a
-                    href={classItem.externalUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto inline-flex items-center text-secondary hover:text-secondary/80 gap-2"
-                  >
-                    Listen on External Platform
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                )}
+                <a
+                  href={classItem.youtubeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center text-secondary hover:text-secondary/80 gap-2"
+                >
+                  Watch on YouTube
+                  <ExternalLink className="w-4 h-4" />
+                </a>
               </div>
             </Card>
           ))}
