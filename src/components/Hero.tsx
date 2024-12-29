@@ -17,7 +17,7 @@ export const Hero = () => {
         {/* Left side - Text content */}
         <div className="text-left space-y-6 animate-fade-up">
           <div className="relative inline-block">
-            <h2 className="text-4xl sm:text-5xl font-bold text-secondary italic mb-4">Hello</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-secondary italic mb-4">Hi!</h2>
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-secondary transform -skew-x-12"></div>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
