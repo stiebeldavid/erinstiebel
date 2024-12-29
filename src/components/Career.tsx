@@ -21,6 +21,7 @@ export const Career = () => {
       role: "Director, 4G Detroit",
       org: "NCSY",
       current: true,
+      image: "/lovable-uploads/a8cb8352-2bfd-473b-ae76-974e9c05ae59.png"
     },
   ];
 
