@@ -5,6 +5,7 @@ import { Leadership } from "@/components/Leadership";
 import { Publications } from "@/components/Publications";
 import { Testimonials } from "@/components/Testimonials";
 import { Classes } from "@/components/Classes";
+import { ContactForm } from "@/components/ContactForm";
 
 const Index = () => {
   return (
@@ -16,6 +17,10 @@ const Index = () => {
       <Classes />
       <Publications />
       <Testimonials />
+      <section className="section-container bg-accent/30">
+        <h2 className="section-title">Contact Me</h2>
+        <ContactForm />
+      </section>
     </div>
   );
 };
