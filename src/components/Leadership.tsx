@@ -1,12 +1,16 @@
 import { Card } from "@/components/ui/card";
-import { Users, ExternalLink } from "lucide-react";
+import { Users, ExternalLink, ChevronRight } from "lucide-react";
 
 export const Leadership = () => {
   const roles = [
     {
-      role: "Board Member",
       org: "Detroit Jewish Federation",
       url: "https://jewishdetroit.org/",
+      positions: [
+        "Board Member",
+        "Allocations Committee",
+        "Next Gen Board"
+      ]
     },
     {
       role: "Core MMC (Mashpia/Mentor/Counselor)",
@@ -17,12 +21,7 @@ export const Leadership = () => {
       role: "Mikvah Mentor",
       org: "Mikvah USA",
       url: "https://mygiftofmikvah.org/educators/",
-    },
-    {
-      role: "Next Gen Board Member",
-      org: "Detroit Jewish Federation",
-      url: "https://jewishdetroit.org/",
-    },
+    }
   ];
 
   return (
@@ -44,17 +43,46 @@ export const Leadership = () => {
                   <div className="p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                     <Users className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold ml-4 group-hover:text-primary transition-colors">{item.role}</h3>
+                  {item.positions ? (
+                    <h3 className="text-xl font-semibold ml-4 group-hover:text-primary transition-colors">
+                      {item.org}
+                    </h3>
+                  ) : (
+                    <h3 className="text-xl font-semibold ml-4 group-hover:text-primary transition-colors">
+                      {item.role}
+                    </h3>
+                  )}
                 </div>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto group inline-flex items-center text-primary hover:text-primary/80"
-                >
-                  {item.org}
-                  <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </a>
+                
+                {item.positions ? (
+                  <div className="mt-4 space-y-2">
+                    {item.positions.map((position, idx) => (
+                      <div key={idx} className="flex items-center text-gray-600">
+                        <ChevronRight className="w-4 h-4 text-primary/60" />
+                        <span className="ml-2">{position}</span>
+                      </div>
+                    ))}
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center text-primary hover:text-primary/80"
+                    >
+                      Visit Website
+                      <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </a>
+                  </div>
+                ) : (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto group inline-flex items-center text-primary hover:text-primary/80"
+                  >
+                    {item.org}
+                    <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                )}
               </div>
             </Card>
           ))}
