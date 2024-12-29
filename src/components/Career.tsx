@@ -15,6 +15,7 @@ export const Career = () => {
       org: "NCSY Summer",
       current: true,
       url: "https://give.ncsy.org/",
+      image: "/lovable-uploads/c0c4136c-e9fd-420e-861a-9f468995b6a4.png"
     },
     {
       role: "Director, 4G Detroit",
