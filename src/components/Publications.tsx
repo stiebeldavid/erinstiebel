@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { BookOpen } from "lucide-react";
+import { BookOpen, ArrowUpRight } from "lucide-react";
 
 export const Publications = () => {
   const articles = [
@@ -18,23 +18,33 @@ export const Publications = () => {
   ];
 
   return (
-    <section className="section-container bg-gray-50">
-      <h2 className="section-title">Publications</h2>
-      <div className="max-w-4xl mx-auto">
-        <div className="grid gap-6">
+    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-center mb-16 text-primary">
+          Publications
+        </h2>
+        <div className="space-y-6">
           {articles.map((article, index) => (
-            <Card key={index} className="p-6">
-              <div className="flex items-center">
-                <BookOpen className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
-                <a
-                  href={article.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-lg hover:text-primary transition-colors"
-                >
-                  {article.title}
-                </a>
-              </div>
+            <Card
+              key={index}
+              className="p-6 hover:shadow-xl transition-all duration-300 group bg-white/80 backdrop-blur"
+            >
+              <a
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between"
+              >
+                <div className="flex items-center flex-1">
+                  <div className="p-3 bg-primary/10 rounded-full">
+                    <BookOpen className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="text-xl ml-4 group-hover:text-primary transition-colors">
+                    {article.title}
+                  </h3>
+                </div>
+                <ArrowUpRight className="w-5 h-5 text-primary transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </a>
             </Card>
           ))}
         </div>
