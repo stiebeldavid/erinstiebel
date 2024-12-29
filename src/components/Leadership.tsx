@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Users, ExternalLink, ChevronRight } from "lucide-react";
+import { Users, ExternalLink, ChevronRight, Award } from "lucide-react";
 
 export const Leadership = () => {
   const roles = [
@@ -37,6 +37,28 @@ export const Leadership = () => {
         <h2 className="text-4xl font-bold text-center mb-16 text-primary">
           Leadership & Volunteering
         </h2>
+        
+        {/* Recognition Card */}
+        <Card className="mb-8 p-8 hover:shadow-xl transition-all duration-300 bg-white/90 backdrop-blur border-t-4 border-t-secondary hover:border-t-secondary/80">
+          <div className="flex items-center gap-4">
+            <div className="p-3 bg-secondary/10 rounded-full">
+              <Award className="w-6 h-6 text-secondary" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">Detroit Jewish News' 36 Under 36</h3>
+              <a
+                href="https://www.thejewishnews.com/news/local/the-well-jn-s-36-under-36-erin-stiebel/article_cfad4aef-7a9e-5b93-9d79-b119f719e1f9.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary hover:text-secondary/80 inline-flex items-center gap-2"
+              >
+                Read More
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </Card>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {roles.map((item, index) => (
             <Card
