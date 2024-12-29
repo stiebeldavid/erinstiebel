@@ -5,7 +5,7 @@ export const Testimonials = () => {
   const testimonials = [
     {
       quote: "Please never leave us",
-      author: "JG (local mom, friend, and neighbor)",
+      author: "Multiple local moms, friends, and neighbors",
     },
     {
       quote: "Mommy is the best mommy ever",
