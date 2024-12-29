@@ -37,12 +37,11 @@ export const Hero = () => {
           </Button>
         </div>
 
-        {/* Right side - Image placeholder */}
+        {/* Right side - Image */}
         <div className="hidden md:block relative">
           <div className="aspect-square rounded-full bg-white/10 backdrop-blur-sm p-6 transform hover:scale-105 transition-transform duration-300">
-            {/* Replace placeholder.svg with Erin's professional photo when available */}
             <img
-              src="/placeholder.svg"
+              src="/lovable-uploads/7ff3dbe5-2211-4494-8343-477b3903669b.png"
               alt="Erin Stiebel"
               className="w-full h-full object-cover rounded-full"
             />
