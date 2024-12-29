@@ -21,6 +21,11 @@ export const Leadership = () => {
       role: "Mikvah Mentor",
       org: "Mikvah USA",
       url: "https://mygiftofmikvah.org/educators/",
+    },
+    {
+      role: "Deja Vu Purim Donation Drive",
+      org: "Yad Ezra",
+      url: "https://www.yadezra.org/",
     }
   ];
 
