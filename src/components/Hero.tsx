@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
 export const Hero = () => {
+  const scrollToFirstSection = () => {
+    const careerSection = document.getElementById("career");
+    if (careerSection) {
+      careerSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-primary via-blue-800 to-blue-900 overflow-hidden">
       {/* Animated background pattern */}
@@ -29,7 +36,7 @@ export const Hero = () => {
           <Button
             variant="secondary"
             size="lg"
-            onClick={() => document.getElementById("education")?.scrollIntoView()}
+            onClick={scrollToFirstSection}
             className="group bg-secondary hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105"
           >
             Learn More
