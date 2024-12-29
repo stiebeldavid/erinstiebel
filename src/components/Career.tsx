@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Briefcase, PersonStanding } from "lucide-react";
+import { Briefcase } from "lucide-react";
 
 export const Career = () => {
   const career = [
@@ -27,7 +27,7 @@ export const Career = () => {
       role: "Dating Coach",
       org: "Independent Practice",
       current: true,
-      icon: PersonStanding
+      image: "/lovable-uploads/6b8347f2-c313-4951-b4d9-50d66827b36b.png"
     },
   ];
 
@@ -46,7 +46,7 @@ export const Career = () => {
               className="group p-6 hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-white via-white to-primary/5 backdrop-blur opacity-0 translate-y-8 animate-[fadeUp_0.5s_ease-out_forwards] hover:-translate-y-2 overflow-hidden"
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
-              {item.image ? (
+              {item.image && (
                 <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
                   <img
                     src={item.image}
@@ -54,10 +54,6 @@ export const Career = () => {
                     className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                </div>
-              ) : item.icon && (
-                <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden bg-primary/5 flex items-center justify-center">
-                  <item.icon className="w-24 h-24 text-primary/50" />
                 </div>
               )}
               <div className="flex items-center mb-4">
