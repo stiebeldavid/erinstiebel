@@ -8,6 +8,10 @@ export const Publications = () => {
       url: "https://www.thejewishnews.com/opinion/boisterous-kids-just-love-them/article_66923306-71f1-5e26-9107-f2f3a55cb3c7.html",
     },
     {
+      title: "Bringing Chanukah into Our Homes",
+      url: "https://www.thejewishnews.com/opinion/purely-commentary-bringing-chanukah-into-our-homes/article_8b9b1cee-74a7-5c6a-97dc-a074bcfed572.html",
+    },
+    {
       title: "A Hotel in Savannah, Georgia: Yom Kippur 5777",
       url: "https://mishpacha.com/a-hotel-in-savannah-georgia-yom-kippur-5777/",
     },
