@@ -1,16 +1,8 @@
-import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
 export const Hero = () => {
-  const scrollToFirstSection = () => {
-    const careerSection = document.getElementById("career");
-    if (careerSection) {
-      careerSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <div className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-primary via-blue-800 to-blue-900 overflow-hidden">
+    <div className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-primary via-blue-800 to-blue-900 overflow-hidden">
       {/* Animated background pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-10">
@@ -33,15 +25,6 @@ export const Hero = () => {
           <p className="text-xl sm:text-2xl text-gray-100 font-light leading-relaxed max-w-xl">
             Dedicated to Empowering Jewish Education & Community Leadership
           </p>
-          <Button
-            variant="secondary"
-            size="lg"
-            onClick={scrollToFirstSection}
-            className="group bg-secondary hover:bg-secondary/90 transition-all duration-300 transform hover:scale-105"
-          >
-            Learn More
-            <ChevronDown className="ml-2 h-4 w-4 animate-bounce" />
-          </Button>
         </div>
 
         {/* Right side - Image */}
