@@ -12,8 +12,8 @@ export const Testimonials = () => {
       author: "Multiple kids",
     },
     {
-      quote: "Ashreini - luckiest husband in the world",
-      author: "Husband",
+      quote: "Ashreini",
+      author: "- World's Luckiest Husband",
     },
   ];
 
@@ -34,7 +34,7 @@ export const Testimonials = () => {
                 "{testimonial.quote}"
               </p>
               <p className="text-sm text-gray-600 font-medium">
-                — {testimonial.author}
+                {testimonial.author}
               </p>
             </Card>
           ))}
