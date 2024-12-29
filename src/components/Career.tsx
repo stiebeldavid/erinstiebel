@@ -8,6 +8,7 @@ export const Career = () => {
       org: "Partners Detroit",
       current: true,
       url: "https://partnersdetroit.org/",
+      image: "/lovable-uploads/86af26fe-651a-4a1d-8230-9b07229eede8.png"
     },
     {
       role: "Director of GIVE",
@@ -32,9 +33,19 @@ export const Career = () => {
           {career.map((item, index) => (
             <Card
               key={index}
-              className="group p-6 hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-white via-white to-primary/5 backdrop-blur opacity-0 translate-y-8 animate-[fadeUp_0.5s_ease-out_forwards] hover:-translate-y-2"
+              className="group p-6 hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-white via-white to-primary/5 backdrop-blur opacity-0 translate-y-8 animate-[fadeUp_0.5s_ease-out_forwards] hover:-translate-y-2 overflow-hidden"
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
+              {item.image && (
+                <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={`${item.role} at ${item.org}`}
+                    className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                </div>
+              )}
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                   <Briefcase className="w-5 h-5 text-primary" />
