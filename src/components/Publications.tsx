@@ -18,8 +18,9 @@ export const Publications = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-white to-secondary/5" />
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <h2 className="text-4xl font-bold text-center mb-16 text-primary">
           Publications
         </h2>
@@ -27,7 +28,7 @@ export const Publications = () => {
           {articles.map((article, index) => (
             <Card
               key={index}
-              className="p-6 hover:shadow-xl transition-all duration-300 group bg-white/80 backdrop-blur"
+              className="group p-6 hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur hover:bg-white/95 border-l-4 border-l-primary/50 hover:border-l-primary"
             >
               <a
                 href={article.url}
@@ -36,7 +37,7 @@ export const Publications = () => {
                 className="flex items-center justify-between"
               >
                 <div className="flex items-center flex-1">
-                  <div className="p-3 bg-primary/10 rounded-full">
+                  <div className="p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                     <BookOpen className="w-5 h-5 text-primary" />
                   </div>
                   <h3 className="text-xl ml-4 group-hover:text-primary transition-colors">

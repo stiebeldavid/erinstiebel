@@ -23,7 +23,7 @@ export const Career = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-24 bg-gradient-to-br from-primary/5 via-white to-primary/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-16 text-primary opacity-0 translate-y-8 animate-[fadeUp_0.5s_ease-out_forwards]">
           Professional Roles
@@ -32,14 +32,14 @@ export const Career = () => {
           {career.map((item, index) => (
             <Card
               key={index}
-              className="p-6 hover:shadow-xl transition-all duration-300 bg-white/50 backdrop-blur opacity-0 translate-y-8 animate-[fadeUp_0.5s_ease-out_forwards]"
+              className="group p-6 hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-white via-white to-primary/5 backdrop-blur opacity-0 translate-y-8 animate-[fadeUp_0.5s_ease-out_forwards] hover:-translate-y-2"
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
               <div className="flex items-center mb-4">
-                <div className="p-3 bg-primary/10 rounded-full">
+                <div className="p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                   <Briefcase className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold ml-4">{item.role}</h3>
+                <h3 className="text-xl font-bold ml-4 group-hover:text-primary transition-colors">{item.role}</h3>
               </div>
               <div className="space-y-2">
                 <a
