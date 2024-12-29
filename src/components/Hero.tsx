@@ -41,7 +41,7 @@ export const Hero = () => {
         <div className="hidden md:block relative">
           <div className="aspect-square rounded-full bg-white/10 backdrop-blur-sm p-6 transform hover:scale-105 transition-transform duration-300">
             <img
-              src="/lovable-uploads/7ff3dbe5-2211-4494-8343-477b3903669b.png"
+              src="/lovable-uploads/1cbc7165-c224-4d4d-92e9-b5d5b2ce4bed.png"
               alt="Erin Stiebel"
               className="w-full h-full object-cover rounded-full"
             />
