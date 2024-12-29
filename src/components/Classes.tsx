@@ -52,9 +52,6 @@ export const Classes = () => {
             >
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-primary mb-4">
-                    {classItem.title}
-                  </h3>
                   <div className="aspect-video w-full">
                     <iframe
                       width="100%"
