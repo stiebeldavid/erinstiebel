@@ -39,13 +39,13 @@ export const Leadership = () => {
         </h2>
         
         {/* Recognition Card */}
-        <Card className="mb-8 p-8 hover:shadow-xl transition-all duration-300 bg-white/90 backdrop-blur border-t-4 border-t-secondary hover:border-t-secondary/80">
-          <div className="flex items-center gap-4">
+        <Card className="mb-8 p-6 md:p-8 hover:shadow-xl transition-all duration-300 bg-white/90 backdrop-blur border-t-4 border-t-secondary hover:border-t-secondary/80">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
             <div className="p-3 bg-secondary/10 rounded-full">
               <Award className="w-6 h-6 text-secondary" />
             </div>
             <div>
-              <h3 className="text-xl font-semibold">Detroit Jewish News' 36 Under 36</h3>
+              <h3 className="text-lg md:text-xl font-semibold">Detroit Jewish News' 36 Under 36</h3>
               <a
                 href="https://www.thejewishnews.com/news/local/the-well-jn-s-36-under-36-erin-stiebel/article_cfad4aef-7a9e-5b93-9d79-b119f719e1f9.html"
                 target="_blank"
@@ -59,23 +59,23 @@ export const Leadership = () => {
           </div>
         </Card>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
           {roles.map((item, index) => (
             <Card
               key={index}
-              className="group p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white/90 backdrop-blur border-t-4 border-t-primary/50 hover:border-t-primary"
+              className="group p-6 md:p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white/90 backdrop-blur border-t-4 border-t-primary/50 hover:border-t-primary overflow-hidden"
             >
               <div className="flex flex-col h-full">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
+                <div className="flex items-start md:items-center mb-4 flex-wrap gap-2">
+                  <div className="p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors shrink-0">
                     <Users className="w-5 h-5 text-primary" />
                   </div>
                   {item.positions ? (
-                    <h3 className="text-xl font-semibold ml-4 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg md:text-xl font-semibold group-hover:text-primary transition-colors">
                       {item.org}
                     </h3>
                   ) : (
-                    <h3 className="text-xl font-semibold ml-4 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg md:text-xl font-semibold group-hover:text-primary transition-colors">
                       {item.role}
                     </h3>
                   )}
@@ -84,8 +84,8 @@ export const Leadership = () => {
                 {item.positions ? (
                   <div className="mt-4 space-y-2">
                     {item.positions.map((position, idx) => (
-                      <div key={idx} className="flex items-center text-gray-600">
-                        <ChevronRight className="w-4 h-4 text-primary/60" />
+                      <div key={idx} className="flex items-center text-gray-600 break-words">
+                        <ChevronRight className="w-4 h-4 text-primary/60 shrink-0" />
                         <span className="ml-2">{position}</span>
                       </div>
                     ))}

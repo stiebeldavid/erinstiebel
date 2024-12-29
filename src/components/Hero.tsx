@@ -38,16 +38,16 @@ export const Hero = () => {
         </div>
 
         {/* Right side - Image */}
-        <div className="hidden md:block relative">
-          <div className="aspect-square rounded-full bg-white/10 backdrop-blur-sm p-6 transform hover:scale-105 transition-transform duration-300">
+        <div className="relative md:block">
+          <div className="aspect-square w-48 md:w-full mx-auto rounded-full bg-white/10 backdrop-blur-sm p-4 md:p-6 transform hover:scale-105 transition-transform duration-300">
             <img
               src="/lovable-uploads/1cbc7165-c224-4d4d-92e9-b5d5b2ce4bed.png"
               alt="Erin Stiebel"
               className="w-full h-full object-cover rounded-full"
             />
           </div>
-          <div className="absolute -bottom-4 right-4 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
-            <p className="text-white/90 font-light">Jewish Educator & Community Leader</p>
+          <div className="absolute -bottom-4 right-4 bg-white/10 backdrop-blur-sm px-4 md:px-6 py-2 md:py-3 rounded-full">
+            <p className="text-sm md:text-base text-white/90 font-light">Jewish Educator & Community Leader</p>
           </div>
         </div>
       </div>

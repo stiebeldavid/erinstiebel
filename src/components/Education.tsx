@@ -19,7 +19,7 @@ export const Education = () => {
         </h2>
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary/20 via-primary to-primary/20" />
+          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary/20 via-primary to-primary/20" />
           
           {/* Timeline items */}
           <div className="space-y-12">
@@ -27,14 +27,18 @@ export const Education = () => {
               <div
                 key={index}
                 className={`flex items-center opacity-0 animate-[fadeUp_0.5s_ease-out_forwards] ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                }`}
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                } flex-row`}
                 style={{ animationDelay: `${0.4 + index * 0.1}s` }}
               >
                 {/* Content */}
-                <div className={`w-1/2 ${index % 2 === 0 ? "pr-12 text-right" : "pl-12 text-left"}`}>
-                  <Card className="inline-block p-6 hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur hover:-translate-y-1 group">
-                    <div className={`flex items-center gap-4 ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}>
+                <div className={`w-full md:w-1/2 ${
+                  index % 2 === 0 ? "md:pr-12 md:text-right pl-16 md:pl-0" : "md:pl-12 pl-16 md:pl-12"
+                } text-left`}>
+                  <Card className="inline-block p-4 md:p-6 hover:shadow-xl transition-all duration-300 bg-white/80 backdrop-blur hover:-translate-y-1 group">
+                    <div className={`flex items-center gap-4 ${
+                      index % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
+                    } flex-row`}>
                       <div className="p-3 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors">
                         <GraduationCap className="w-5 h-5 text-primary" />
                       </div>
@@ -44,7 +48,7 @@ export const Education = () => {
                 </div>
 
                 {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-lg" />
+                <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-lg" />
               </div>
             ))}
           </div>
